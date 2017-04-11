@@ -1,0 +1,26 @@
+D:\Programs\PostgreSQL\9.6\bin
+λ psql -U postgres
+Password for user postgres:
+psql (9.6.2)
+WARNING: Console code page (866) differs from Windows code page (1251)
+         8-bit characters might not work correctly. See psql reference
+         page "Notes for Windows users" for details.
+Type "help" for help.
+
+postgres=# \c univerlesson02_orm
+WARNING: Console code page (866) differs from Windows code page (1251)
+         8-bit characters might not work correctly. See psql reference
+         page "Notes for Windows users" for details.
+You are now connected to database "univerlesson02_orm" as user "postgres".
+univerlesson02_orm=# SELECT * FROM myusers;
+ id |         address          | name
+----+--------------------------+-------
+  1 | Kyiv;Maydan Nezalegnosti | vasya
+(1 row)
+
+
+univerlesson02_orm=# SELECT * FROM address;
+ERROR:  relation "address" does not exist
+LINE 1: SELECT * FROM address;
+                      ^
+univerlesson02_orm=#
